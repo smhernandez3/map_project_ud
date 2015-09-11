@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Tag Map</title>
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="JS/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places" ></script> 
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="top">
+            <h1 class="header">Tag Map</h1>
+            <a class="bright yo" data-toggle="modal" data-target=".intro">Sign In || About</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+            <form class="input-group search">
+              <input type="text" class="form-control" data-bind="textInput: query" placeholder="Search for...">
+              <span class="input-group-btn"><button class="btn btn-default">Go!</button></span>
+            </form>
+            <div class="results">
+              <table class="table table-hover">
+                <tbody data-bind="foreach: results">
+                  <tr class="yo" data-bind="visible: isVisible, click: openInfoWindow">
+                    <td><img class="img_thumb" data-bind="attr: {src: picThumb, id: index}"></td>
+                    <td><h5 class="media-heading" data-bind="text: tag1"></h5></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="map" class="col-md-9 da_map img-responsive"></div>
+      </div>
+
+      <div class="modal fade intro" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <ul id="tizabs" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                  <a href="#sign_in" id="sing_in-tab" role="tab" data-toggle="tab" aria-controls="sign_in" aria-expanded="true">Sign In</a>
+                </li>
+                <li role="presentation">
+                  <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about">About</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="sign_in" aria-labelledby="sign_in-tab">
+                  <p class="m_text">
+                    You have to sign into Instagram to use this App!
+                  </p>
+                  <div>
+                    <a href="https://instagram.com/oauth/authorize/?client_id=16b4587d28a54f09985fb8d1d441816f&redirect_uri=http://tagmap.site44.com/&response_type=token">Sign In</a>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="about" aria-labelledby="about-tab">
+                  <p class="m_text">
+                    Hello and welcome to Tag Map! This is a very simple web application that uses both the Instagram and Google Maps API.  Tag Map finds the nine most recent Instagram pictures taken within a 5km radius of downtown Salinas, CA.  It then plots the location of where the picture was taken on a google map.  The search bar is used to filter the images.  You have to sign into Instagram in order to use this application.  
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+
+    <!-- For larg insta pic Modals -->
+      <div>
+        <div class="0"></div>
+        <div class="1"></div>
+        <div class="2"></div>
+        <div class="3"></div>
+        <div class="4"></div>
+        <div class="5"></div>
+        <div class="6"></div>
+        <div class="7"></div>
+        <div class="8"></div>
+      </div>
+    </div>
+
+    <!-- scripts and stuff -->
+    <script type="text/javascript" src="bower_components/knockout/dist/knockout.js"></script>
+    <script src="JS/main.js"></script>   
+  </body>
+</html>
+
+

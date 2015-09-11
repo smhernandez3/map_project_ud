@@ -1,0 +1,56 @@
+.top{
+	display: table;
+}
+.yo:hover{
+	cursor: pointer;
+}
+.header{
+	font-size: 3.5em;
+	float: left;
+}
+.bright{
+	float: right;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+.search{
+	width: 100%;
+	padding-bottom: 20px;
+}
+/*Results bar*/
+.results{
+	background-color: #D0D0D0;
+	height: 554px;
+}
+.img_thumb{
+	width: 45px;
+	height: 45px;
+}
+
+.gmap_thumbs{
+	width: 55px;
+	height: 55px;
+}
+/*================*/
+
+.da_map{
+	height: 607px;
+}
+.sig{
+	display: table;
+}
+.flright{
+	float: right;
+}
+.insta_l{
+	float: left;
+}
+
+/*=============modal styling============*/
+.modalimg{
+	float: left;
+}
+.m_text{
+	font-size: 1em;
+	padding-top: 10px;
+}
